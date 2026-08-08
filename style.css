@@ -6,12 +6,13 @@
 }
 
 :root {
-    --primary: #1b4332;
-    --primary-light: #2d6a4f;
-    --accent: #52b788;
-    --bg-light: #f8f9fa;
-    --text-dark: #212529;
-    --text-muted: #6c757d;
+    --primary: #102a43;
+    --primary-light: #243b53;
+    --accent: #AACEFF;
+    --accent-dark: #3a86ff;
+    --bg-light: #f4f8fb;
+    --text-dark: #102a43;
+    --text-muted: #486581;
     --white: #ffffff;
     --transition: all 0.3s ease;
 }
@@ -48,13 +49,13 @@ ul {
 }
 
 .link-styled {
-    color: var(--primary-light);
+    color: var(--accent-dark);
     text-decoration: underline;
     font-weight: 600;
 }
 
 .link-styled:hover {
-    color: var(--accent);
+    color: var(--primary);
 }
 
 /* Header */
@@ -92,7 +93,7 @@ ul {
 }
 
 .nav-links a:hover {
-    color: var(--accent);
+    color: var(--accent-dark);
 }
 
 .btn-nav {
@@ -106,7 +107,7 @@ ul {
     background: var(--primary-light);
 }
 
-/* Hero Section with Geometric Shapes (No Photos) */
+/* Hero Section */
 .hero {
     background: var(--primary);
     color: var(--white);
@@ -118,14 +119,14 @@ ul {
 
 .geometric-shape {
     position: absolute;
-    opacity: 0.08;
+    opacity: 0.12;
     pointer-events: none;
 }
 
 .shape-1 {
     width: 300px;
     height: 300px;
-    border: 40px solid var(--white);
+    border: 40px solid var(--accent);
     border-radius: 50%;
     top: -50px;
     left: -50px;
@@ -147,11 +148,11 @@ ul {
 
 .badge {
     background: var(--accent);
-    color: var(--white);
+    color: var(--primary);
     padding: 0.3rem 0.8rem;
     border-radius: 50px;
     font-size: 0.85rem;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -186,7 +187,7 @@ ul {
 }
 
 .btn-primary {
-    background: var(--accent);
+    background: var(--accent-dark);
     color: var(--white);
 }
 
@@ -242,7 +243,7 @@ ul {
 .mission-box {
     background: var(--bg-light);
     padding: 2rem;
-    border-left: 4px solid var(--accent);
+    border-left: 4px solid var(--accent-dark);
     border-radius: 0 4px 4px 0;
 }
 
@@ -348,7 +349,7 @@ ul {
     padding: 2.5rem;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    border-top: 4px solid var(--primary);
+    border-top: 4px solid var(--accent-dark);
 }
 
 .academic-card h3 {
@@ -398,7 +399,7 @@ ul {
 }
 
 .project-tag.upcoming {
-    background: #d8f3dc;
+    background: #e1effe;
     color: var(--primary);
 }
 
@@ -464,6 +465,7 @@ ul {
 
 .footer-link {
     text-decoration: underline;
+    color: var(--accent);
 }
 
 .footer-bottom {
