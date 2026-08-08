@@ -29,6 +29,12 @@
                         <small>Amasaman, Ghana</small>
                     </div>
                 </a>
+                <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
                 <div class="nav-links">
                     <a href="#about">About</a>
                     <a href="#mission">Mission</a>
@@ -71,7 +77,7 @@
              ABOUT
         ======================================= -->
 
-        <section id="about">
+        <section id="about" class="section about-section">
             <div class="section-header">
                 <p class="eyebrow">ABOUT US</p>
                 <h2>About Graceham Academy</h2>
@@ -107,7 +113,7 @@
              MISSION
         ======================================= -->
 
-        <section id="mission">
+        <section id="mission" class="section mission-section">
             <div class="section-header">
                 <p class="eyebrow">OUR MISSION</p>
                 <h2>Our Mission</h2>
@@ -127,7 +133,7 @@
              STRATEGY
         ======================================= -->
 
-        <section id="strategy">
+        <section id="strategy" class="section strategy-section">
             <div class="section-header">
                 <p class="eyebrow">OUR STRATEGY</p>
                 <h2>Future-Ready Education for a Changing World</h2>
@@ -202,7 +208,7 @@
              LEADERSHIP
         ======================================= -->
 
-        <section id="leadership">
+        <section id="leadership" class="section leadership-section">
             <div class="section-header">
                 <p class="eyebrow">LEADERSHIP</p>
                 <h2>Leadership</h2>
@@ -230,7 +236,7 @@
              ACADEMICS
         ======================================= -->
 
-        <section id="academics">
+        <section id="academics" class="section academics-section">
             <div class="section-header">
                 <p class="eyebrow">ACADEMICS</p>
                 <h2>Academics</h2>
@@ -299,7 +305,7 @@
              ADMISSIONS
         ======================================= -->
 
-        <section id="admissions">
+        <section id="admissions" class="section admissions-section">
             <div class="section-header">
                 <p class="eyebrow">ADMISSIONS</p>
                 <h2>Find the Right Beginning for Your Child</h2>
@@ -327,6 +333,27 @@
     <footer>
         <p>&copy; 2026 Graceham Academy. All rights reserved.</p>
     </footer>
+
+    <script>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener("click", () => {
+                const isOpen = navLinks.classList.toggle("active");
+                menuToggle.classList.toggle("active", isOpen);
+                menuToggle.setAttribute("aria-expanded", isOpen);
+            });
+
+            navLinks.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", () => {
+                    navLinks.classList.remove("active");
+                    menuToggle.classList.remove("active");
+                    menuToggle.setAttribute("aria-expanded", "false");
+                });
+            });
+        }
+    </script>
 
 </body>
 
