@@ -119,7 +119,7 @@ ul {
     color: var(--text-primary) !important;
 }
 
-/* Hero Section with Logo on Left */
+/* Hero Section with Logo on Left (Shifted & Reduced) */
 .hero {
     background: var(--bg-primary);
     color: var(--text-primary);
@@ -155,7 +155,7 @@ ul {
 
 .hero-grid {
     display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-columns: 0.7fr 1.3fr;
     gap: 3rem;
     align-items: center;
     position: relative;
@@ -164,16 +164,17 @@ ul {
 
 .hero-logo-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    margin-left: -20px; /* Shifts the logo slightly further to the left */
 }
 
 .hero-logo {
     width: 100%;
-    max-width: 260px;
+    max-width: 180px; /* Reduced logo size */
     height: auto;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
     border: 1px solid var(--border-color);
     object-fit: contain;
 }
@@ -470,9 +471,9 @@ ul {
     color: var(--text-secondary);
 }
 
-/* Restored Photo Below Admissions */
+/* Reduced Photo Size Below Admissions */
 .hero-image-container-below {
-    max-width: 450px;
+    max-width: 350px; /* Reduced size for foto1.jpg */
     margin: 2rem auto 0 auto;
 }
 
@@ -547,6 +548,8 @@ ul {
     }
     
     .hero-logo-container {
+        justify-content: center;
+        margin-left: 0;
         margin-bottom: 1rem;
     }
     
