@@ -119,12 +119,11 @@ ul {
     color: var(--text-primary) !important;
 }
 
-/* Hero Section */
+/* Hero Section with Split Grid & Logo */
 .hero {
     background: var(--bg-primary);
     color: var(--text-primary);
-    padding: 8rem 0;
-    text-align: center;
+    padding: 6rem 0;
     position: relative;
     overflow: hidden;
     border-bottom: 1px solid var(--border-color);
@@ -155,14 +154,16 @@ ul {
 }
 
 .hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem;
+    align-items: center;
     position: relative;
     z-index: 2;
-    max-width: 800px;
-    margin: 0 auto;
 }
 
 .hero-content {
-    text-align: center;
+    text-align: left;
 }
 
 .badge {
@@ -178,23 +179,39 @@ ul {
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin: 1.5rem 0;
+    font-size: 2.8rem;
+    margin: 1.2rem 0;
     font-weight: 700;
     color: var(--text-primary);
+    line-height: 1.2;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: 0 auto 2rem;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
     color: var(--text-secondary);
 }
 
 .hero-btns {
     display: flex;
     gap: 1rem;
+    justify-content: flex-start;
+}
+
+.hero-logo-container {
+    display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.hero-logo {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    border: 1px solid var(--border-color);
+    object-fit: contain;
 }
 
 /* Buttons */
@@ -453,21 +470,6 @@ ul {
     color: var(--text-secondary);
 }
 
-/* Reduced Image Style Placed Below Admissions Closing Note */
-.hero-image-container-below {
-    max-width: 450px;
-    margin: 2rem auto 0 auto;
-}
-
-.hero-img-below {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-    border: 1px solid var(--border-color);
-    object-fit: cover;
-}
-
 /* Footer */
 .site-footer {
     background: var(--text-primary);
@@ -512,15 +514,28 @@ ul {
         display: none;
     }
     
-    .about-grid {
+    .hero-grid {
         grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .hero-content {
+        text-align: center;
     }
     
     .hero h1 {
         font-size: 2.2rem;
     }
     
-    .hero-image-container-below {
-        max-width: 100%;
+    .hero-btns {
+        justify-content: center;
+    }
+    
+    .hero-logo-container {
+        margin-top: 2rem;
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
     }
 }
