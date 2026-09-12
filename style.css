@@ -336,7 +336,7 @@ ul {
     font-size: 0.95rem;
 }
 
-/* Leadership Profiles (Fixed size for portrait pictures) */
+/* Leadership Profiles */
 .leadership-section {
     margin-top: 4rem;
     text-align: center;
@@ -377,7 +377,7 @@ ul {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top center; /* Focuses on faces in portrait photos */
+    object-position: top center;
 }
 
 .placeholder-wrapper {
@@ -531,7 +531,7 @@ ul {
 
 .news-content p {
     color: var(--text-secondary);
-    font-size: 0.9rem;
+    font-size: 0.92rem;
     margin-bottom: 0.8rem;
 }
 
